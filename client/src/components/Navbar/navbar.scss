@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+.headr{
+    .pages{
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+    .icons{
+        ul{
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+}
