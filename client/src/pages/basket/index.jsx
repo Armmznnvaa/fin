@@ -6,12 +6,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
 import { BasketItemContext } from '../../context/BasketItemContext';
+import axios from 'axios';
 const Basket = () => {
     const {basketItem,setBasketItem,plusBasket,minusBasket}=useContext(BasketItemContext)
+
      const deleteItem=async(item)=>{
-          setBasketItem(basketItem.filter((x)=>x._id === item._id))
+          axios.delete(`http://localhost:3001/api/fas/${item._id}`)
+          setBasketItem(basketItem.filter((x)=>x._id !== item._id))
      }
 
     
